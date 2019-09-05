@@ -1,3 +1,3 @@
-import drinks.milk.drink()
+import drinks.milk
 
 drinks.milk.drink()
