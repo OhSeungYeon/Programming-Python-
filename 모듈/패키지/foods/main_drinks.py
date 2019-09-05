@@ -1,5 +1,5 @@
-from foods.drinks import *
+from drinks import *
 
 milk.drink()
 coke.drink()
-water.dsrink()
+water.drink()

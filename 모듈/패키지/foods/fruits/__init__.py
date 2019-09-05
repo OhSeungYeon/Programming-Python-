@@ -1,1 +1,1 @@
-grape.eat()
+__all__ = ['grape', 'peach', 'watermelon']
