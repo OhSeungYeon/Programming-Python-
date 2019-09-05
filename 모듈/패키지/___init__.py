@@ -1,0 +1,1 @@
+__all__ = ['coke', 'milk', 'water']
