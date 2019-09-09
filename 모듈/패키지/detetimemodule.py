@@ -1,0 +1,22 @@
+from datetime import datetime
+
+print('현재 날짜 시각 객체 얻기')
+today = datetime.now()
+print('today = datetime.now() : ', today)
+print('연, 월, 일 : ', today.year, today.month, today.day)
+print('시, 분, 초 : ', today.hour, today.minute, today.second)
+print('요일 : ', today.weekday())
+print('특정 날짜 시각 객체 만들기')
+day = datetime(2019, 1, 1, 0, 0, 0)
+print('day = datetime(2019, 1, 1, 0, 0, 0) : ', day)
+print('2018년부터 지나온 시간 구하기')
+print('today - day : ', today - day)
+
+birth = datetime(2002, 12, 7, 11, 40, 0)
+crismas = datetime(2019, 12, 25, 0, 0, 0)
+print("태어난 날은 무슨 요일 ?")
+print("월화수목금토일"[birth.weekday()], "요일")
+print("나는 며칠을 살았을까 ?")
+print(today - birth)
+print("크리스마스는 얼마나 남았을까 ?")
+print(crismas - today)
