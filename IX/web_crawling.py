@@ -21,5 +21,9 @@ if __name__ == '__main__':
         print(link)
         html += "<a href='{}'>{}</a><br>".format(link, title)     #<a href='link'>title</a>
     html += "</body></html>"
+
+    outputSoup = BeautifulSoup(html, "lxml")        #내가 생성한 html 문자열을 soup 객체로 만들자
+    prettyHtml = str(outputSoup.prettify())         #예쁘게 html 코드로 만들자
+
     with open("연애혁명.html", "w", encoding="utf-8") as f :    #html 파일을 만들자
-        f.write(html)
+        f.write(prettyHtml)
