@@ -2,5 +2,6 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/VIIL_파일처리/file.txt" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/아마스빈/history.bin" charset="UTF-8" />
   </component>
 </project>

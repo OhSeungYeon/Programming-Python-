@@ -4,15 +4,15 @@ class FileIO() :
     def __init__(self, filename):
         self.filename = filename
 
-    def save(self, data) :
-        with open(self.filename, "wb") as f :
-            pickle.dump(data, f)
+    def append(self, data) :
+        with open(self.filename, mode="a",encoding="utf-8") as f :
+            f.write(data+"\n")
 
-    def load(self):
+    def read(self):
         try :
-            with open(self.filename, "rb") as f:
-                data = pickle.load(f)
+            with open(self.filename, mode="r",encoding="utf-8") as f:
+                a = f.read()
+                return a
+
         except FileNotFoundError :
             raise FileNotFoundError
-
-        return data

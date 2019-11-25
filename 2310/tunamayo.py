@@ -1,19 +1,14 @@
 from drink import Drink
 
 class TunaMayo(Drink):
-  _spicys = ["순한맛", "1단계", "2단계", "3단계", "4단계", "5단계"]
+  _spicys = ["없음", "순한맛", "1단계", "2단계", "3단계", "4단계", "5단계"]
 
   def __init__(self, name, price):
     super().__init__(name, price)
-    self.spicy = -1
-
-  def set_spicy(self):
-      if self.spicy == -1 :
-        self.spicy = "없음"
+    self.spicy = 0
 
   def __str__(self):
-    return super().__str__() + "\t매운맛:" + TunaMayo._spicys[self.spicy]
+    return super().__str__() + "\t매운맛:" + TunaMayo._spicys[int(self.spicy)]
 
   def order(self):
-    super().order
-    self.set_spicy()
+    super().order()
